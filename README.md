@@ -3,7 +3,7 @@
 
 
 # 💫 About Me:
-🌱 I’m currently learning | App Development with Flutter | Machine Learning | DSA with C++ |<br>🔭 I’m currently working on | Anime Recommendation Application |<br>👯 I’m looking to collaborate on | Python projects under Mentorship |<br>🤝 I’m looking for Mentorship/Internship<br>💬 Ask me about : Noob in coding <br>⚡ how to Reach Me : ketanthakur603@gmail.com 
+🌱 I’m currently learning DSA with C++ | ML/AI | Full stack dev |<br>🔭 I’m currently working on Full stack skills and DSA<br>👯 I’m looking to collaborate on Web projects under Mentorship |<br>🤝 I’m looking for Mentorship/Internship<br>💬 Ask me about : Passionate to learn coding and do projects <br>⚡ how to Reach Me : ketan.thakur.21cse@bmu.edu.in | ketanthakur603@gmail.com |
 
 
 ## 🌐 Socials:
