@@ -1,8 +1,5 @@
 
 
-https://github.com/user-attachments/assets/f9f2c5a7-d1e7-48b0-9f90-1991205b6541
-
-
 
 
 # 💫 About Me:
