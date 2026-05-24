@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" width="1200" height="280" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1117"/>
+      <stop offset="50%" stop-color="#1F1530"/>
+      <stop offset="100%" stop-color="#7C3AED"/>
+    </linearGradient>
+
+    <linearGradient id="waveA" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="waveB" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#7C3AED" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <linearGradient id="waveC" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5B21B6" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#5B21B6" stop-opacity="0.15"/>
+    </linearGradient>
+
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="2.5" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <style>
+      @keyframes waveMove1 {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-200px); }
+      }
+      @keyframes waveMove2 {
+        0%   { transform: translateX(-200px); }
+        100% { transform: translateX(0); }
+      }
+      @keyframes waveMove3 {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-150px); }
+      }
+      @keyframes twinkle {
+        0%, 100% { opacity: 0.3; }
+        50%      { opacity: 1; }
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-4px); }
+      }
+      @keyframes lineGlow {
+        0%, 100% { opacity: 0.3; }
+        50%      { opacity: 0.9; }
+      }
+
+      .w1 { animation: waveMove1 8s linear infinite; }
+      .w2 { animation: waveMove2 12s linear infinite; }
+      .w3 { animation: waveMove3 15s linear infinite; }
+      .star { animation: twinkle 3s ease-in-out infinite; }
+      .name { animation: float 4s ease-in-out infinite; }
+      .divider { animation: lineGlow 2.5s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="280" fill="url(#bgGrad)"/>
+
+  <!-- Wave layer 1 (slowest, deepest tint) -->
+  <g class="w3">
+    <path d="M-200,220 C0,200 200,240 400,215 C600,190 800,235 1000,210 C1200,185 1400,225 1600,205 L1600,280 L-200,280 Z" fill="url(#waveC)"/>
+  </g>
+
+  <!-- Wave layer 2 -->
+  <g class="w2">
+    <path d="M-200,200 C100,170 300,225 600,195 C900,165 1100,215 1400,190 L1400,280 L-200,280 Z" fill="url(#waveB)"/>
+  </g>
+
+  <!-- Wave layer 3 (top, fastest) -->
+  <g class="w1">
+    <path d="M-200,175 C150,140 350,200 650,170 C950,140 1150,195 1400,165 L1400,280 L-200,280 Z" fill="url(#waveA)"/>
+  </g>
+
+  <!-- Twinkling stars / particles -->
+  <circle class="star" cx="120" cy="60"  r="2"   fill="#A78BFA" style="animation-delay: 0s"/>
+  <circle class="star" cx="1050" cy="55" r="1.5" fill="#A78BFA" style="animation-delay: 0.6s"/>
+  <circle class="star" cx="980" cy="110" r="1"   fill="#FFFFFF" style="animation-delay: 1.2s"/>
+  <circle class="star" cx="200" cy="45"  r="1"   fill="#FFFFFF" style="animation-delay: 0.3s"/>
+  <circle class="star" cx="1100" cy="170" r="2"  fill="#A78BFA" style="animation-delay: 1.8s"/>
+  <circle class="star" cx="80" cy="190"  r="1.5" fill="#FFFFFF" style="animation-delay: 0.9s"/>
+  <circle class="star" cx="450" cy="50"  r="1.5" fill="#A78BFA" style="animation-delay: 2.1s"/>
+  <circle class="star" cx="850" cy="35"  r="1"   fill="#FFFFFF" style="animation-delay: 1.5s"/>
+  <circle class="star" cx="320" cy="180" r="1"   fill="#A78BFA" style="animation-delay: 0.4s"/>
+  <circle class="star" cx="900" cy="200" r="1.5" fill="#FFFFFF" style="animation-delay: 2.4s"/>
+
+  <!-- Name with subtle float -->
+  <g class="name">
+    <text x="600" y="125"
+          font-family="'JetBrains Mono', 'Courier New', monospace"
+          font-size="72" font-weight="700" fill="#FFFFFF"
+          text-anchor="middle" letter-spacing="-1"
+          filter="url(#glow)">
+      Ketan Thakur
+    </text>
+  </g>
+
+  <!-- Role label -->
+  <text x="600" y="172"
+        font-family="'JetBrains Mono', 'Courier New', monospace"
+        font-size="18" font-weight="600" fill="#A78BFA"
+        text-anchor="middle" letter-spacing="4">
+    FRONTEND DEVELOPER &amp; TEAM LEAD
+  </text>
+
+  <!-- Animated divider -->
+  <line class="divider" x1="500" y1="192" x2="700" y2="192"
+        stroke="#A78BFA" stroke-width="1.5"/>
+
+  <!-- Tagline -->
+  <text x="600" y="222"
+        font-family="'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="15" fill="#C9D1D9"
+        text-anchor="middle" opacity="0.9">
+    Building Onified — Multi-tenant Enterprise SaaS at Scale
+  </text>
+</svg>

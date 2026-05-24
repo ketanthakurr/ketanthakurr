@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 130" width="1200" height="130" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="footerBg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7C3AED"/>
+      <stop offset="50%" stop-color="#1F1530"/>
+      <stop offset="100%" stop-color="#0D1117"/>
+    </linearGradient>
+
+    <linearGradient id="footerWaveA" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#A78BFA" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#A78BFA" stop-opacity="0.05"/>
+    </linearGradient>
+
+    <linearGradient id="footerWaveB" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#5B21B6" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#5B21B6" stop-opacity="0.1"/>
+    </linearGradient>
+
+    <style>
+      @keyframes fWave1 {
+        0%   { transform: translateX(0); }
+        100% { transform: translateX(-200px); }
+      }
+      @keyframes fWave2 {
+        0%   { transform: translateX(-200px); }
+        100% { transform: translateX(0); }
+      }
+      @keyframes fade {
+        0%, 100% { opacity: 0.8; }
+        50%      { opacity: 1; }
+      }
+      .fw1 { animation: fWave1 10s linear infinite; }
+      .fw2 { animation: fWave2 14s linear infinite; }
+      .fmsg { animation: fade 3s ease-in-out infinite; }
+    </style>
+  </defs>
+
+  <rect width="1200" height="130" fill="url(#footerBg)"/>
+
+  <!-- Top wave layer -->
+  <g class="fw2">
+    <path d="M-200,55 C100,30 300,80 600,50 C900,20 1100,70 1400,45 L1400,0 L-200,0 Z" fill="url(#footerWaveB)"/>
+  </g>
+
+  <!-- Lighter accent wave -->
+  <g class="fw1">
+    <path d="M-200,40 C150,15 350,65 650,35 C950,10 1150,55 1400,25 L1400,0 L-200,0 Z" fill="url(#footerWaveA)"/>
+  </g>
+
+  <!-- Footer text -->
+  <text class="fmsg" x="600" y="92"
+        font-family="'JetBrains Mono', monospace"
+        font-size="15" font-weight="700" fill="#FFFFFF"
+        text-anchor="middle" letter-spacing="4">
+    THANKS FOR SCROLLING ↑
+  </text>
+</svg>
